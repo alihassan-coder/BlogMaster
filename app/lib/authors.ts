@@ -1,0 +1,72 @@
+export interface Author {
+  id: number
+  name: string
+  role: string
+  bio: string
+  image: string
+  socialMedia: {
+    twitter?: string
+    linkedin?: string
+    instagram?: string
+  }
+}
+
+export const authors: Author[] = [
+  {
+    id: 1,
+    name: "Emma Thompson",
+    role: "Senior Content Strategist",
+    bio: "Emma is a seasoned content strategist with over a decade of experience in digital marketing. She specializes in SEO-driven content creation and has helped numerous businesses skyrocket their online presence.",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    socialMedia: {
+      twitter: "https://twitter.com/emmathompson",
+      linkedin: "https://linkedin.com/in/emmathompson",
+    },
+  },
+  {
+    id: 2,
+    name: "Alex Chen",
+    role: "Tech Blogger & Software Engineer",
+    bio: "Alex brings a unique perspective to blogging with his background in software engineering. He's passionate about explaining complex technical concepts in simple terms and staying on top of the latest tech trends.",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    socialMedia: {
+      twitter: "https://twitter.com/alexchen",
+      github: "https://github.com/alexchen",
+    },
+  },
+  {
+    id: 3,
+    name: "Sophia Rodriguez",
+    role: "Lifestyle & Wellness Editor",
+    bio: "Sophia is a certified wellness coach and lifestyle blogger. Her articles focus on sustainable living, mindfulness, and holistic health, inspiring readers to live their best lives.",
+    image:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    socialMedia: {
+      instagram: "https://instagram.com/sophiarodriguez",
+      twitter: "https://twitter.com/sophiarodriguez",
+    },
+  },
+  {
+    id: 4,
+    name: "Daniel Lee",
+    role: "Personal Finance & Entrepreneurship Guru",
+    bio: "Daniel is a serial entrepreneur and personal finance expert. He shares invaluable insights on building wealth, smart investing, and navigating the world of startups.",
+    image:
+      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1148&q=80",
+    socialMedia: {
+      linkedin: "https://linkedin.com/in/daniellee",
+      twitter: "https://twitter.com/daniellee",
+    },
+  },
+]
+
+export async function getAllAuthors(): Promise<Author[]> {
+  return Promise.resolve(authors)
+}
+
+export async function getAuthorById(id: number): Promise<Author | undefined> {
+  return Promise.resolve(authors.find((author) => author.id === id))
+}
+
