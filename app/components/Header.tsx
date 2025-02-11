@@ -15,9 +15,10 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120 }}
     >
+      
       <nav className="container mx-auto px-6 py-3">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-3xl font-bold text-blue-600">
+          <Link href="/" className="text-2xl font-bold text-blue-600 fount-serif">
             BlogMaster
           </Link>
           <div className="hidden md:flex space-x-4 items-center">
